@@ -1,0 +1,11 @@
+#PBS -S /bin/csh
+#PBS -V
+#PBS -q normal
+#PBS -lselect=1:ncpus=1:mpiprocs=1:model=rom_ait,walltime=01:00:00
+#PBS -j oe
+#PBS -o /home5/pmarines/INCUS/Plot_Code/W_PDF/stdout/ 
+#PBS -N INCUS_Test_CMP_WPDF
+#PBS -m be
+#PBS -r n
+
+/home5/pmarines/miniconda3/envs/plotenv/bin/python save_wprofs.py >& BRA1.1RP_6000.out 
